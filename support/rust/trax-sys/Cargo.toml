@@ -11,3 +11,4 @@ cxx = "1.0"
 [build-dependencies]
 bindgen = "0.60.1"
 cmake = "0.1.48"
+cxx-build = "1.0"
