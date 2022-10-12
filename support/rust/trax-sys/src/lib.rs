@@ -9,12 +9,12 @@ pub mod ffi {
         fn new_logging() -> UniquePtr<Logging>;
         type Bounds;
         fn new_bounds() -> UniquePtr<Bounds>;
+        // Handle's constructor is protected.
         type Handle;
-        // fn new_handle(...) -> UniquePtr<Handle>;
         type Client;
-        // fn new_client(...) -> UniquePtr<Client>;
+        // FIXME: fn new_client(...) -> UniquePtr<Client>;
         type Server;
-        // fn new_server(...) -> UniquePtr<Server>;
+        // FIXME: fn new_server(...) -> UniquePtr<Server>;
         type Image;
         fn new_image() -> UniquePtr<Image>;
         type Region;

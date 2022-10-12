@@ -12,19 +12,19 @@ namespace trax {
         return std::make_unique<trax::Bounds>();
     };
 
-    // Handle constructor is protected
+    // Handle constructor is protected, so this won't work:
     // std::unique_ptr<trax::Handle> new_handle() {
     //     return std::make_unique<trax::Handle>();
     // };
 
-    // Client constructor takes at least 2 arguments:
+    // FIXME: Client constructor takes at least 2 arguments:
     //     Client(int input, int output, Logging logger);
     //     Client(int server, Logging logger,  int timeout = -1);
     // std::unique_ptr<trax::Client> new_client() {
     //     return std::make_unique<trax::Client>();
     // };
 
-    // Server constructor requires 2 arguments: Server(Metadata metadata, Logging log);
+    // FIXME: Server constructor requires 2 arguments: Server(Metadata metadata, Logging log);
     // std::unique_ptr<trax::Server> new_server() {
     //     return std::make_unique<trax::Server>();
     // };
