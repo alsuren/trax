@@ -1,18 +1,16 @@
-#[cxx::bridge]
-pub mod ffi {
-    unsafe extern "C++" {
-        include!("../../../../include/trax.h");
+use autocxx::prelude::*; // use all the main autocxx functions
 
-        type Metadata;
-        type Logging;
-        type Bounds;
-        type Handle;
-        type Client;
-        type Server;
-        type Image;
-        type Region;
-        type Properties;
-    }
+include_cpp! {
+    safety!(unsafe_ffi)
+    // generate!(Metadata);
+    // generate!(Logging);
+    generate!(Bounds);
+    // generate!(Handle);
+    // generate!(Client);
+    // generate!(Server);
+    // generate!(Image);
+    // generate!(Region);
+    // generate!(Properties);
 }
 
 #[cfg(test)]
