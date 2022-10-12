@@ -1,8 +1,19 @@
-#![allow(non_upper_case_globals)]
-#![allow(non_camel_case_types)]
-#![allow(non_snake_case)]
+#[cxx::bridge]
+pub mod ffi {
+    unsafe extern "C++" {
+        include!("../../../../include/trax.h");
 
-include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
+        type Metadata;
+        type Logging;
+        type Bounds;
+        type Handle;
+        type Client;
+        type Server;
+        type Image;
+        type Region;
+        type Properties;
+    }
+}
 
 #[cfg(test)]
 mod tests {
